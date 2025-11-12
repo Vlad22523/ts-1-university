@@ -2,4 +2,4 @@
 const usersName = "Влад";
 const age = 20;
 const issStudent = true;
-console.log(`Привіт, мене звати ${userName}. Мені ${age} років. Студент: ${isStudent}`);
+console.log(`Привіт, мене звати ${usersName}. Мені ${age} років. Студент: ${issStudent}`);
