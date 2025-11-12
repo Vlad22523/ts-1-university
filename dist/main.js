@@ -32,7 +32,7 @@ var __awaiter =
       step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
   };
-// dst: src/main.ts
+
 const userName = "Влад";
 const userAge = 20;
 const isStudent = true;
@@ -43,6 +43,7 @@ const modalText = document.getElementById("modalText");
 const loadBtn = document.getElementById("loadBtn");
 const cardsContainer = document.getElementById("cards");
 const backToTop = document.getElementById("backToTop");
+
 function showModal(message) {
   if (!modal || !modalText) return;
   modalText.textContent = message;
@@ -54,6 +55,7 @@ function closeModal() {
   modal.classList.add("hidden");
   modal.setAttribute("aria-hidden", "true");
 }
+
 if (openModalBtn) {
   openModalBtn.addEventListener("click", () => {
     showModal(
@@ -106,6 +108,7 @@ function renderPosts(posts) {
     cardsContainer.appendChild(card);
   });
 }
+
 if (loadBtn) {
   loadBtn.addEventListener("click", () =>
     __awaiter(void 0, void 0, void 0, function* () {

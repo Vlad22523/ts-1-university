@@ -31,7 +31,6 @@ function closeModal(): void {
   modal.setAttribute("aria-hidden", "true");
 }
 
-// Події кліку
 if (openModalBtn) {
   openModalBtn.addEventListener("click", () => {
     showModal(

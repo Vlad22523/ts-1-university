@@ -13,7 +13,9 @@
     </header>
 
     <main class="container">
-      <section class="cards" id="cards"></section>
+      <section class="cards" id="cards">
+        <!-- Тут будуть згенеровані картки з fetch -->
+      </section>
 
       <section class="actions">
         <button id="loadBtn" class="btn">Завантажити пости (fetch)</button>
@@ -22,6 +24,7 @@
       <div id="backToTop" class="back-to-top">↑</div>
     </main>
 
+    <!-- Modal -->
     <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
       <div class="modal-content">
         <button id="closeModalBtn" class="close-btn">×</button>
@@ -30,6 +33,6 @@
       </div>
     </div>
 
-    <script src="../ts-1/dist/main.js" defer></script>
+    <script src="../dist/main.js" defer></script>
   </body>
 </html>
