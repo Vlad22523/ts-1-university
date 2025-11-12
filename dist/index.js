@@ -1,5 +1,5 @@
 "use strict";
-const userName = "Влад";
+const usersName = "Влад";
 const age = 20;
-const isStudent = true;
+const issStudent = true;
 console.log(`Привіт, мене звати ${userName}. Мені ${age} років. Студент: ${isStudent}`);

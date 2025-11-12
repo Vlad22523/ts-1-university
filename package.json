@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "npm run build && live-server public --port=8080 --open=public/index.html"
   },
   "keywords": [],
   "author": "Vlad_Melnyk <vlad22523@gmail.com>",
   "license": "ISC",
-  "description": "",
+  "description": "Базовий проєкт на TypeScript з прикладом простої конфігурації та прикладом коду.  \r Проєкт містить гілки **main** і **develop**.",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
+    "eslint": "^9.39.1",
     "typescript": "^5.9.3"
   }
 }
