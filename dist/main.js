@@ -33,11 +33,9 @@ var __awaiter =
     });
   };
 // dst: src/main.ts
-// Примітивні типи
-const userName = "Влад"; // *не* name, щоб уникнути конфлікту з глобальним 'name'
+const userName = "Влад";
 const userAge = 20;
 const isStudent = true;
-// DOM-елементи (типізовані)
 const openModalBtn = document.getElementById("openModalBtn");
 const closeModalBtn = document.getElementById("closeModalBtn");
 const modal = document.getElementById("modal");
@@ -45,7 +43,6 @@ const modalText = document.getElementById("modalText");
 const loadBtn = document.getElementById("loadBtn");
 const cardsContainer = document.getElementById("cards");
 const backToTop = document.getElementById("backToTop");
-// Безпечні утиліти
 function showModal(message) {
   if (!modal || !modalText) return;
   modalText.textContent = message;
@@ -57,7 +54,6 @@ function closeModal() {
   modal.classList.add("hidden");
   modal.setAttribute("aria-hidden", "true");
 }
-// Події кліку
 if (openModalBtn) {
   openModalBtn.addEventListener("click", () => {
     showModal(
@@ -71,11 +67,9 @@ if (closeModalBtn) {
 if (modal) {
   modal.addEventListener("click", (e) => {
     const target = e.target;
-    // Закрити при кліку поза вікном
     if (target && target.id === "modal") closeModal();
   });
 }
-// Scroll: показ кнопки "back to top"
 window.addEventListener("scroll", () => {
   if (!backToTop) return;
   if (window.scrollY > 300) backToTop.classList.add("show");
@@ -91,7 +85,7 @@ function fetchPosts() {
     const res = yield fetch("https://jsonplaceholder.typicode.com/posts");
     if (!res.ok) throw new Error(`HTTP error ${res.status}`);
     const data = yield res.json();
-    return data.slice(0, 8); // беремо 8 постів як приклад
+    return data.slice(0, 8);
   });
 }
 function renderPosts(posts) {
@@ -112,7 +106,6 @@ function renderPosts(posts) {
     cardsContainer.appendChild(card);
   });
 }
-// load button handler
 if (loadBtn) {
   loadBtn.addEventListener("click", () =>
     __awaiter(void 0, void 0, void 0, function* () {
