@@ -1,15 +1,10 @@
-import { renderPosts } from "./modules/posts.js";
-import { scrollToTop } from "./modules/scroll.js";
-import { showModal } from "./modules/modal.js";
-const postsContainer = document.getElementById("posts");
-const showBtn = document.getElementById("show-btn");
-const scrollBtn = document.getElementById("scroll-btn");
-const posts = [
-    { id: 1, title: "Перший пост", body: "Це приклад тексту першого поста." },
-    { id: 2, title: "Другий пост", body: "Ще один приклад запису." },
-];
-showBtn.addEventListener("click", () => {
-    renderPosts(postsContainer, posts);
-    showModal("Пости завантажено!");
-});
-scrollBtn.addEventListener("click", scrollToTop);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const calculator_1 = require("./modules/calculator/calculator");
+const formatter_1 = require("./modules/formatter/formatter");
+const logger_1 = require("./modules/logger/logger");
+const nums = { a: 5, b: 7 };
+const sum = (0, calculator_1.add)(nums);
+const product = (0, calculator_1.multiply)(nums);
+(0, logger_1.log)((0, formatter_1.formatMessage)(`Сума: ${sum}`));
+(0, logger_1.log)((0, formatter_1.formatMessage)(`Добуток: ${product}`));

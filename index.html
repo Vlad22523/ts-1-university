@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TS модулі</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Демонстрація модулів TypeScript</h1>
+    <div class="buttons">
+      <button id="show-btn">Показати пости</button>
+      <button id="scroll-btn">Прокрутити вгору</button>
+    </div>
+    <div id="posts"></div>
+
+    <script src="../dist/main.js" type="module" defer></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TS Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Лендінг з інтерактивністю</h1>
+      <button id="openModalBtn">Відкрити модалку</button>
+    </header>
+
+    <section class="content">
+      <h2>Отримані дані (fetch)</h2>
+      <button id="loadPostsBtn">Завантажити пости</button>
+
+      <div id="posts"></div>
+    </section>
+
+    <!-- Модалка -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <h2>Модальне вікно</h2>
+        <p>Це модалка з TypeScript!</p>
+      </div>
+    </div>
+
+    <script src="./dist/main.js" defer></script>
+  </body>
+</html>

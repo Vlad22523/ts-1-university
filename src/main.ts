@@ -1,20 +1,12 @@
-import { renderPosts } from "./modules/posts.js";
-import { scrollToTop } from "./modules/scroll.js";
-import { showModal } from "./modules/modal.js";
-import { Post } from "./types/post.js";
+import { add, multiply } from "./modules/calculator/calculator";
+import { formatMessage } from "./modules/formatter/formatter";
+import { log } from "./modules/logger/logger";
+import { NumberPair } from "./types/types";
 
-const postsContainer = document.getElementById("posts")!;
-const showBtn = document.getElementById("show-btn")!;
-const scrollBtn = document.getElementById("scroll-btn")!;
+const nums: NumberPair = { a: 5, b: 7 };
 
-const posts: Post[] = [
-  { id: 1, title: "Перший пост", body: "Це приклад тексту першого поста." },
-  { id: 2, title: "Другий пост", body: "Ще один приклад запису." },
-];
+const sum = add(nums);
+const product = multiply(nums);
 
-showBtn.addEventListener("click", () => {
-  renderPosts(postsContainer, posts);
-  showModal("Пости завантажено!");
-});
-
-scrollBtn.addEventListener("click", scrollToTop);
+log(formatMessage(`Сума: ${sum}`));
+log(formatMessage(`Добуток: ${product}`));
