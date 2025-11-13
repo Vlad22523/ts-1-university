@@ -4,10 +4,6 @@
     "module": "commonjs",
     "strict": true,
     "rootDir": "src",
-    "outDir": "dist",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
-  },
-  "include": ["src/**/*"]
+    "outDir": "dist"
+  }
 }

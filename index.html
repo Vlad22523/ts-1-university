@@ -1,38 +1,33 @@
 <!DOCTYPE html>
 <html lang="uk">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>TS Template — Приклад</title>
-    <link rel="stylesheet" href="./public/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TS Project</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <h1>TypeScript Demo</h1>
-      <button id="openModalBtn" class="btn">Відкрити модал</button>
+    <header class="header">
+      <h1>Лендінг з інтерактивністю</h1>
+      <button id="openModalBtn">Відкрити модалку</button>
     </header>
 
-    <main class="container">
-      <section class="cards" id="cards">
-        <!-- Тут будуть згенеровані картки з fetch -->
-      </section>
+    <section class="content">
+      <h2>Отримані дані (fetch)</h2>
+      <button id="loadPostsBtn">Завантажити пости</button>
 
-      <section class="actions">
-        <button id="loadBtn" class="btn">Завантажити пости (fetch)</button>
-      </section>
+      <div id="posts"></div>
+    </section>
 
-      <div id="backToTop" class="back-to-top">↑</div>
-    </main>
-
-    <!-- Modal -->
-    <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <!-- Модалка -->
+    <div id="modal" class="modal">
       <div class="modal-content">
-        <button id="closeModalBtn" class="close-btn">×</button>
+        <span id="closeModalBtn" class="close">&times;</span>
         <h2>Модальне вікно</h2>
-        <p id="modalText">Тут динамічний текст.</p>
+        <p>Це модалка з TypeScript!</p>
       </div>
     </div>
 
-    <script src="../dist/main.js" defer></script>
+    <script src="dist/main.js"></script>
   </body>
 </html>
